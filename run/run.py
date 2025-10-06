@@ -3,6 +3,7 @@ from pydantic_ai.models.openai import OpenAIChatModel
 from pydantic_ai.providers.openrouter import OpenRouterProvider
 import os
 from dotenv import load_dotenv
+import asyncio
 
 # Load API key from .env
 load_dotenv()
@@ -13,13 +14,15 @@ model = OpenAIChatModel(
     'deepseek/deepseek-chat-v3.1:free',
     provider=OpenRouterProvider(api_key=api_key),
 )
-
 # Define your agent
 agent = Agent(
     model=model,
-    instructions='Be concise, reply with one sentence.',
 )
 
-# Run query
-result = agent.run_sync('Where does "hello world" come from?')
-print(result.output)
+async def main():
+    # an async function which returns a RunResult containing a completed response.
+    agent_run = await agent.run('What is the capital of France?')
+    print(agent_run.output)
+
+if __name__ == "__main__":
+    asyncio.run(main())

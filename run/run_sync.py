@@ -13,13 +13,12 @@ model = OpenAIChatModel(
     'deepseek/deepseek-chat-v3.1:free',
     provider=OpenRouterProvider(api_key=api_key),
 )
-
 # Define your agent
 agent = Agent(
     model=model,
-    instructions='Be concise, reply with one sentence.',
 )
+# this will work with a function that reads each line and display it
+# run sync function is useful when you want to see it line by line
+result_sync = agent.run_sync('What is the capital of Italy?')
+print(result_sync.output)
 
-# Run query
-result = agent.run_sync('Where does "hello world" come from?')
-print(result.output)
