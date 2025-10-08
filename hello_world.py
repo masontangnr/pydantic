@@ -10,7 +10,7 @@ api_key = os.getenv("OPENROUTER_API_KEY")
 
 # Define your model using OpenRouter's OpenAI-compatible API
 model = OpenAIChatModel(
-    'deepseek/deepseek-chat-v3.1:free',
+    'meta-llama/llama-3.2-1b-instruct',
     provider=OpenRouterProvider(api_key=api_key),
 )
 
