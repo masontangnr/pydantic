@@ -1,7 +1,6 @@
 import asyncio
 from dataclasses import dataclass
 from datetime import date
-
 from pydantic_ai import (
     Agent,                   # Represents an a model capable of processing input and generating responses.
     FinalResultEvent,        # Event signalling the final, complete result of a run or process.
@@ -14,31 +13,45 @@ from pydantic_ai import (
     ThinkingPartDelta,       # A partial update (delta) for a ThinkingPart to append new thinking content.
     ToolCallPartDelta,       # A partial update (delta) for a ToolCallPart to modify tool name, arguments, or tool call ID.
 )
+from pydantic_ai.models.openai import OpenAIChatModel
+from pydantic_ai.providers.openrouter import OpenRouterProvider
+import os
+from dotenv import load_dotenv
+# Load API key from .env
+load_dotenv()
+api_key = os.getenv("OPENROUTER_API_KEY")
 
+# Define your model using OpenRouter's OpenAI-compatible API
+model = OpenAIChatModel(
+    'openai/gpt-oss-20b',
+    provider=OpenRouterProvider(api_key=api_key),
+)
 
 @dataclass
 class WeatherService:
+  # An asynchronous method that simulates calling an external weather API for a future date. It returns a hardcoded, mock forecast string.
     async def get_forecast(self, location: str, forecast_date: date) -> str:
         # In real code: call weather API, DB queries, etc.
         return f'The forecast in {location} on {forecast_date} is 24°C and sunny.'
-
+  # An asynchronous method that simulates getting historical weather data for a past date. It also returns a hardcoded, mock result.
     async def get_historic_weather(self, location: str, forecast_date: date) -> str:
         # In real code: call a historical weather API or DB
         return f'The weather in {location} on {forecast_date} was 18°C and partly cloudy.'
 
-
+# WeatherService is the type of the dependencies (deps_type)
+# str is the type of the final output (output_type) the agent will produce.
 weather_agent = Agent[WeatherService, str](
-    'openai:gpt-4o',
+     model=model,
     deps_type=WeatherService,
     output_type=str,  # We'll produce a final answer as plain text
     system_prompt='Providing a weather forecast at the locations the user provides.',
 )
 
-
+# This decorator registers the asynchronous function weather_forecast as a callable tool for the agent's LLM. The LLM will "see" this function's name and signature (arguments) and can choose to call i
 @weather_agent.tool
 async def weather_forecast(
-    ctx: RunContext[WeatherService],
-    location: str,
+    ctx: RunContext[WeatherService], #ctx: RunContext provides access to the agent's execution context,
+    location: str, #arguments provided to the LLM and enforcing type
     forecast_date: date,
 ) -> str:
     if forecast_date >= date.today():
@@ -46,9 +59,7 @@ async def weather_forecast(
     else:
         return await ctx.deps.get_historic_weather(location, forecast_date)
 
-
 output_messages: list[str] = []
-
 
 async def main():
     user_prompt = 'What will the weather be like in Paris on Tuesday?'
