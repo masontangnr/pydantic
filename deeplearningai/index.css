@@ -1,0 +1,248 @@
+/*hero section  */
+.wp-block-uagb-container.uagb-block-5a7944ee{
+	background-position: 34% 0% !important;
+}
+.wp-block-uagb-container.uagb-block-5a7944ee{
+	background-attachment:scroll !important;
+}
+/*services padding  */
+.wp-block-uagb-container.uagb-block-15eb1b9a{
+	padding-top:32px !important
+}
+.wp-block-uagb-container.uagb-block-15eb1b9a{
+	background-attachment: scroll !important;
+}
+.uagb-block-ec172ef0 .uagb-ifb-title{
+	color: #FFFFFFCC !important;
+}
+div#services {
+    padding-left: 3em;
+}
+/*2 column width  */
+/* .column-width{
+	margin-left:auto !important;
+	margin-right:auto !important;
+} */
+/* Contact Header  */
+.wp-block-buttons .wp-block-button.is-style-outline .wp-block-button__link.wp-element-button, .ast-outline-button, .wp-block-uagb-buttons-child .uagb-buttons-repeater.ast-outline-button{
+	border:5px solid rgba(255, 255, 255, 0.8) !important;
+}
+.uagb-buttons__outer-wrap.uagb-btn__extralarge-btn .uagb-buttons-repeater.wp-block-button__link:not(.is-style-outline), .uagb-buttons__outer-wrap.uagb-btn__extralarge-btn .uagb-buttons-repeater.ast-outline-button{
+	padding: 36px 12px;
+	
+}
+.wp-block-uagb-container.uagb-block-335d7edf{
+	background-attachment: scroll !important;
+}
+/*CONTACT TEXT  PADDING*/
+.wp-block-uagb-container.uagb-block-335d7edf{
+	padding-top:60px;
+}
+.contact-button {
+    border: 2px solid black;
+    width: 200px;
+    height: 50px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 14px;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+}
+/* INSTAGRAM PADDING-Follow US */
+section#text-7{
+	margin-bottom: 38px;
+}
+img.wp-image-2187{
+	cursor:pointer;
+}
+section#block-14 h2 {
+  font-family: 'Abhaya Libre', serif !important;
+  font-weight: 500;
+  font-size: 52px;
+  margin-bottom: 0;
+}
+/*Zavant footer Text */
+section#block-14 h3{
+	font-family: Open Sans;
+	font-size: 12px;
+	font-weight:400;
+	margin-bottom: 36px;
+	margin-left:36px;
+}
+section#block-14 p{
+	font-family: Montserrat;
+	font-size: 17px;
+	font-weight:300;
+	margin-bottom: 36px;
+	max-width: 303px;
+}
+#colophon h2{
+	font-family: Montserrat;
+	font-size:24px;
+	font-weight:600;
+}
+.contact-bold{
+	font-family: Montserrat;
+	font-size:18px;
+	font-weight:600;
+}
+#text-6 p{
+	font-family: Montserrat;
+	font-size:17px;
+	font-weight:400;
+}
+.ast-footer-copyright p{
+	font-weight:300 !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1200px) {
+/* 	hero text padding */
+	.wp-block-uagb-container.uagb-is-root-container.alignfull.uagb-block-5a7944ee > .uagb-container-inner-blocks-wrap{
+		max-width: 96% !important;
+	}
+	/* Services Contact padding*/
+	.wp-block-uagb-container.uagb-block-15eb1b9a{
+		padding-left: 6% !important;
+		padding-right: 3% !important;
+	}
+	/* Contact padding */
+	.wp-block-uagb-container.uagb-block-98a3f28c{
+		padding-left: 5% !important;
+	}
+}
+@media (max-width: 976px){
+	.wp-block-uagb-container.uagb-block-335d7edf{
+		padding-left: 0px; 
+	}
+	.uagb-block-e41a4088.uagb-buttons__outer-wrap .uagb-buttons__wrap{
+		justify-content: center !important;
+	}
+/* 	contact */
+/* 	padding-left: 2%; */
+}
+@media (max-width: 921px) {
+		.wp-block-uagb-container.uagb-block-5a7944ee{
+		background-position:65% 60% !important;
+	}
+	.menu-link{
+		color:white !important;
+	}
+	section#block-14{
+		display: flex;
+    flex-direction: column;
+    align-items: center !important;
+	}
+	.textwidget{
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+	}
+/* 	footer */
+	section#text-7{
+		margin-bottom: 0px;
+		margin-top: 78px;
+	}
+	section#block-14 h3{
+		margin-left:0px;
+	}
+	.ast-builder-menu-1 .main-header-menu, .ast-builder-menu-1 .main-header-menu .sub-menu {
+	background-color:black;	
+	}
+}
+@media (max-width: 767px) {
+/* 	contact */
+	.wp-block-uagb-container.uagb-block-335d7edf{
+		padding-left:2%;
+	}
+/* About Image */
+	.wp-block-uagb-container.uagb-block-de690b67{
+		align-items: center !important;
+	}
+}
+@media (min-width: 767px) {
+	.wp-block-uagb-image--align-none{
+		justify-content:flex-start;
+	}
+}
+@media (min-width: 782px) {
+	.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{
+		flex-basis: auto !important;
+	}
+	.wp-block-columns{
+		flex-wrap:wrap !important;
+		align-items: center !important;
+	}
+
+}
+@media (max-width: 766px) {
+/* header-button	 */
+.uagb-buttons__outer-wrap.uagb-btn__extralarge-btn .uagb-buttons-repeater.wp-block-button__link:not(.is-style-outline), .uagb-buttons__outer-wrap.uagb-btn__extralarge-btn .uagb-buttons-repeater.ast-outline-button {
+        padding: 25px 9px;
+    }
+/* 	why image */
+	.wp-block-uagb-container.uagb-block-7f1e6a0f{
+		align-items:center !important;
+	}
+/* 	gallery image */
+	.before-image{
+		text-align:center;
+		margin-left:0px !important;
+	}
+	.after-image-1{
+		margin-left: 0px !important;
+		text-align:center;
+	}
+	.after-image-2{
+		margin-left: 0px !important;
+		text-align:center;
+	}
+/* 	contact */
+	.uagb-block-e41a4088.wp-block-uagb-buttons.uagb-buttons__outer-wrap .uagb-buttons__wrap{
+		align-items: center;
+	}
+	.wp-block-uagb-container.uagb-block-335d7edf{
+		padding-top:30px;
+	}
+h4, .entry-content h4, .entry-content h4 a{
+		font-size: 14px;
+	}
+}
+@media (max-width: 544px) {
+	.ast-desktop .ast-primary-header-bar.main-header-bar, .ast-header-break-point #masthead .ast-primary-header-bar.main-header-bar{
+		padding-top: 1em !important;
+		padding-bottom: 1em !important;
+	}
+	header .custom-logo-link img{
+		width: 160px;
+	}
+/* 	service */
+	.wp-block-uagb-container.uagb-block-20c63cfe{
+		padding-top: 19px;
+	}
+	.wp-block-uagb-container.uagb-block-a749bd62{
+		align-items:center;
+	}
+	.wp-block-columns.is-layout-flex.wp-container-core-columns-is-layout-28f84493.wp-block-columns-is-layout-flex{
+		align-items:center !important;
+		flex-direction: column;
+	}
+}
+@media (max-width: 365px) {
+	.uagb-buttons__outer-wrap.uagb-btn__extralarge-btn .uagb-buttons-repeater.wp-block-button__link:not(.is-style-outline), .uagb-buttons__outer-wrap.uagb-btn__extralarge-btn .uagb-buttons-repeater.ast-outline-button{
+		padding: 25px 4px;
+	}
+}
+.before-image{
+	margin-left:83px;
+}
+.after-image-1{
+	margin-left:120px;
+}
+.after-image-2{
+	margin-left:120px;
+}
